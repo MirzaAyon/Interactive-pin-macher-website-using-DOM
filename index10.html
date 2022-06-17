@@ -80,8 +80,9 @@
             //inspact e gitPin(); diye try korbo
 
             document.getElementById('key-pad').addEventListener('click', function (event) {
-                console.log(event.target.innerText);
-                //ekhn console e giye jekono ekta button e click korle number ta shoow hbe 
+                const number = event.target.innerText;
+                const calc = document.getElementById('typed-numbers');
+                calc.value = number;
 
             })
         </script>
