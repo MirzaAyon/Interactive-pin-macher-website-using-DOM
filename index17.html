@@ -54,8 +54,8 @@
                 </div>
             </div>
             <div class="notify-section">
-                <p class="notify">❌ Pin Didn't Match, Please try again</p>
-                <p class="notify">✅ Pin Matched... Secret door is opening for you</p>
+                <p id="notify-fail" class="notify">❌ Pin Didn't Match, Please try again</p>
+                <p id="notify-success" class="notify">✅ Pin Matched... Secret door is opening for you</p>
             </div>
         </div>
         <script>
@@ -104,10 +104,14 @@
                 const pin = document.getElementById('display-pin').value;
                 const typedNumbers = document.getElementById('typed-numbers').value;
                 if (pin == typedNumbers) {
-                    console.log('matched');
+                    const successMessage = document.getElementById('notify-success');
+                    successMessage.style.display = 'block'
                 }
                 else {
-                    console.log('not matched');
+
+                    // console.log('not matched');
+                    const failerror = document.getElementById('notify-fail');
+                    failerror.style.display = 'block'
                 }
 
             }       
@@ -115,3 +119,4 @@
 </body>
 
 </html>
+<!-- prothom dhakkae nicher 2 take hide kore dibo john match hbe tokhn ekta dekhabe r match na hole onno ta dekhabe -->
